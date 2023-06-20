@@ -114,7 +114,7 @@ func sendToWebhook(payload []byte) error {
 	if resp.StatusCode != http.StatusOK {
 		return fmt.Errorf("webhook request failed with status code %d", resp.StatusCode)
 	}
-	log.Fatal(http.ListenAndServe(":3000", nil))
+	log.Fatal(http.ListenAndServe(":8080", nil))
 	return nil
 
 }
